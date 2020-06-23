@@ -11,31 +11,29 @@ package com.tuling.concurrent;
 
 /**
  * volatile 关键字可以解决多线程的可见性和有序性，但是不能够解决的原子性
- *
+ * <p>
  * read  load  use assign  store write
- *
+ * <p>
  * 最初使用总线加锁的方式  在read是lock     在write是unlock  当多的线程使用同一个共享变量时就会等待排队  效率低下
- *
+ * <p>
  * MESI缓存一致性协议   在store时lock   在write时unlock   加锁范围大大减小
  * 其原理是主要是通过汇编语言lock 前缀指令
- *
- *
- *
  */
 public class VolatileVisibilityTest {
     /**
      * 共享数据
      */
     private static volatile boolean initFlag = false;
+
     public static void main(String[] args) throws InterruptedException {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 System.out.println("waiting data..");
-                while (!initFlag){
+                while (!initFlag) {
 
                 }
-                System.out.println("获取到新的数据，initFlag值为"+initFlag);
+                System.out.println("获取到新的数据，initFlag值为" + initFlag);
             }
         }).start();
 
@@ -45,7 +43,7 @@ public class VolatileVisibilityTest {
             @Override
             public void run() {
                 System.out.println("数据获取中");
-                initFlag=true;
+                initFlag = true;
                 System.out.println("prepare  end....");
 
             }
@@ -53,5 +51,7 @@ public class VolatileVisibilityTest {
 
     }
 
-
+    private String name;       //dev支线开发
+    private String age;      //dev支线开发
+    private String message;  //dev支线开发
 }
