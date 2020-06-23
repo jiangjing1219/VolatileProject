@@ -61,4 +61,7 @@ public class VolatileVisibilityTest {
 
     private String gander; //dev 合并master最新的信息
 
+
+    private String addr;  //dev持续开发
+
 }
