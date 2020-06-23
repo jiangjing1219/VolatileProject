@@ -56,5 +56,6 @@ public class VolatileVisibilityTest {
 
     }
 
+    private String gander;
 
 }
