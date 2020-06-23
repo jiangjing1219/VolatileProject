@@ -48,6 +48,9 @@ public class VolatileVisibilityTest {
                 initFlag=true;
                 System.out.println("prepare  end....");
 
+
+                System.out.println("fix 支线修改master的bug");
+
             }
         }).start();
 
