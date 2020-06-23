@@ -46,12 +46,19 @@ public class VolatileVisibilityTest {
                 initFlag = true;
                 System.out.println("prepare  end....");
 
+
+                System.out.println("fix 支线修改master的bug");
+
             }
         }).start();
 
     }
 
+
     private String name;       //dev支线开发
     private String age;      //dev支线开发
     private String message;  //dev支线开发
+
+    private String gander; //dev 合并master最新的信息
+
 }
