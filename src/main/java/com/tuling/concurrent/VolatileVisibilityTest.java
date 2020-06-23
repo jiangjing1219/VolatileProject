@@ -52,4 +52,6 @@ public class VolatileVisibilityTest {
         }).start();
 
     }
+
+    private String name;
 }
