@@ -53,8 +53,5 @@ public class VolatileVisibilityTest {
 
     }
 
-    private String name;
 
-
-    private String age;
 }
